@@ -6,13 +6,15 @@
 #  Copyright 2016 Researchnix. All rights reserved.
 #
 
-#from random import randint
 import random
+
 
 class Deck:
     """A deck of cards"""
-    content = []
-    
+
+    def __init__(self):
+        self.content = []
+
     def fill(self, num):
         self.content = range(1, num + 1)
     
