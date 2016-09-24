@@ -6,7 +6,6 @@
 #  Copyright 2016 Researchnix. All rights reserved.
 #
 
-import sys
 import argparse
 import os
 import time
@@ -20,6 +19,8 @@ def main(iterations=DEFAULT_ITERATIONS, verbose=False, showPlot=False):
     t = time.time()
 
     formatTime = time.strftime("%Y-%m-%dT%H:%M:%S", time.gmtime())
+    if not os.path.exists("results"):
+        os.makedirs("results")
     filename = os.path.join("results", "{}.txt".format(formatTime))
 
     master = GameMaster.GameMaster(filename)
