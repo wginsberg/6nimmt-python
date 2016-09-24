@@ -24,6 +24,7 @@ If you want to implement your own player for this game, all you need to do is:
 
             self.players.append(p3)
 
+Run the game with `python main.py` and find the resulting score in the 'results' directory.
+For a list of options for running the game:
 
-Then execute 'make' and find the resulting score in the file 'results.txt'.
-Feel free to play around and modify other bits and pieces of the code.
+`python main.py -h`
