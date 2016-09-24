@@ -122,7 +122,7 @@ class GameMaster:
             for p in self.players:
                 results[p.name] = p.bulls
             self.loggy.save(results)
-            #print results
-            #print '\n'
-            
-        
+
+            if verbose:
+                print results
+                print '\n'
