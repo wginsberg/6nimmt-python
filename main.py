@@ -6,22 +6,16 @@
 #  Copyright 2016 Researchnix. All rights reserved.
 #
 
-import sys
+import os
 import time
-
-import Deck
 import GameMaster
-import Field
-import LogWriter
 import Evaluation
-
-
-
 
 if __name__ == "__main__":
     t = time.time()
 
-    filename = "results.txt"
+    format_time = time.strftime("%Y-%m-%dT%H:%M:%S", time.gmtime())
+    filename = os.path.join("results", "{}.txt".format(format_time))
 
     master = GameMaster.GameMaster(filename)
     master.playGames(10000, verbose=False)
