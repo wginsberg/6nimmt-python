@@ -27,7 +27,7 @@ def main(iterations=DEFAULT_ITERATIONS, verbose=False, showPlot=False):
 
     eva = Evaluation.Evaluation()
     eva.loadData(filename)
-    print "\n\nDone in " + str(time.time() - t) + " s"
+    print "Done in " + str(time.time() - t) + " s"
     eva.showData(showPlot)
 
 if __name__ == "__main__":

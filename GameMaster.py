@@ -15,7 +15,6 @@ import Lennart
 import Jonas
 
 class GameMaster:
-    verbose = False
     players = []
     field = Field.Field()
     roundCount = 0
@@ -105,16 +104,14 @@ class GameMaster:
             self.playRound()
 
     def playGames(self, n, verbose=False):
-        print "Starting to play " + str(n) + " games"
+        print "Starting to play " + str(n) + " games\n"
         # delete all results in the file
         self.loggy.delete()
         self.initializePlayers()
         for m in range(n):
-            if self.verbose:
+            if verbose:
                 print " ########### Game " + str(m) + "  ########### "
             self.initializeGame()
-            if self.verbose:
-                print "game initialized"
             self.playRounds(10)
 
             # save the results to a file

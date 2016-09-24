@@ -76,7 +76,6 @@ class Evaluation:
         trata = self.tr(self.data)
         self.findWinner()
         self.makeChart()
-        print "Total number of wins:\n"
         for j in range(self.n):
             print self.players[j] + " has won " + str(self.winner.count(j)) + " times"
         #y = trata[0]
